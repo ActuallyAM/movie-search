@@ -1,0 +1,40 @@
+<div class="container">
+<h1 class="text-center">Search for any movies</h1>
+
+
+
+<input class="form-control search-box" matInput [formControl]="searchFormControl" type="text" autocomplete="off" placeholder="Search for a movies" autofocus>
+<div class="movie-search">
+<div class="row">
+    <div class="col-md-3 col-sm-4" *ngFor="let movie of movies">
+<div class="item item-hover">
+
+
+    <div class="text-name">
+        <a (click)="gotoDetails(movie)">
+            <p  class="text-center">{{movie.Title}}</p>
+        </a>
+
+    </div>
+
+<div class="item-img">
+    <a (click)="gotoDetails(movie)">
+        <img src='{{movie.Poster}}' height="200" width="auto"/>
+    </a>
+            </div>
+<div class="item-info">
+        <p>Type: {{movie.Type}}</p>
+        <p>Relese year: {{movie.Year}}</p>
+        <button class="btn btn-danger" (click)="gotoDetails(movie)">Read More</button>
+</div>
+        
+                
+
+
+</div>
+    
+
+</div>
+</div>
+</div>
+</div>
